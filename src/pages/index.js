@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
-import Link from "next/link";
-import styles from "@/styles/Home.module.css";
+import Home from "@/components/Home/Home";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +18,7 @@ export async function getServerSideProps() {
   };
 }
 
-export default function Home({ data }) {
+export default function HomePage({ data }) {
   return (
     <>
       <Head>
@@ -27,31 +27,9 @@ export default function Home({ data }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
-        <nav>
-          <Link href="/" passHref>
-            Home
-          </Link>
-          <Link href="/about-us" passHref>
-            About us
-          </Link>
-          <Link href="/events" passHref>
-            Events
-          </Link>
-        </nav>
-      </header>
-      <main className={styles.main}>
-        {data.map((event) => {
-          const { id, title, description, image } = event;
-          return (
-            <Link key={id} href={`/events/${id}`} passHref>
-              <Image src={image} alt={title} width={200} height={200} />
-              <h2>{title}</h2>
-              <p>{description}</p>
-            </Link>
-          );
-        })}
-      </main>
+      <Header />
+      <Home data={data} />
+      <Footer />
     </>
   );
 }
