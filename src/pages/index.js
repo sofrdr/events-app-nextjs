@@ -1,11 +1,24 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import Link from "next/link";
+import styles from "@/styles/Home.module.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export async function getServerSideProps() {
+  const data = await import("../../data/data.json");
+  console.log(data.allEvents);
+  const { events_categories } = await data;
+
+  return {
+    props: {
+      data: events_categories,
+    },
+  };
+}
+
+export default function Home({ data }) {
   return (
     <>
       <Head>
@@ -14,9 +27,31 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <header>
+        <nav>
+          <Link href="/" passHref>
+            Home
+          </Link>
+          <Link href="/about-us" passHref>
+            About us
+          </Link>
+          <Link href="/events" passHref>
+            Events
+          </Link>
+        </nav>
+      </header>
       <main className={styles.main}>
-        
+        {data.map((event) => {
+          const { id, title, description, image } = event;
+          return (
+            <Link key={id} href={`/events/${id}`} passHref>
+              <Image src={image} alt={title} width={200} height={200} />
+              <h2>{title}</h2>
+              <p>{description}</p>
+            </Link>
+          );
+        })}
       </main>
     </>
-  )
+  );
 }
