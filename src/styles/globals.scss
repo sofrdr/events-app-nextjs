@@ -90,6 +90,46 @@ main {
   }
 }
 
+.single-event-body {
+  .email-registration {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    label {
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    input {
+      height: 40px;
+      min-width: 350px;
+      outline: none;
+      border-radius: 5px;
+      box-shadow: none;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      height: 40px;
+      border: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-left: 10px;
+      border-radius: 5px;
+      background-color: #f0e3ff;
+      min-width: 150px;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  }
+}
+
 footer {
   background-color: #333;
   color: #fff;
