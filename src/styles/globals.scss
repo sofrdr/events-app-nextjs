@@ -16,14 +16,19 @@ a {
 }
 
 header {
-  height: 300px;
-  padding: 50px;
-  background: linear-gradient(305deg, #dbfff3, transparent);
+  background: linear-gradient(305deg, #ecdbff, transparent);
+  padding: 15px 30px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
   .top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     ul {
       display: flex;
       list-style: none;
@@ -37,8 +42,32 @@ header {
   h1 {
     width: 40%;
     font-size: 40px;
-
     text-transform: uppercase;
+  }
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 40px;
+}
+
+.home-body {
+  display: flex;
+  flex-direction: column;
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+    &:nth-child(even) {
+      direction: rtl;
+    }
+    &-content {
+      width: 50%;
+    }
   }
 }
 
