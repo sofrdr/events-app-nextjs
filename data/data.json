@@ -52,7 +52,8 @@
             "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
             "emails_registered": [
                 "alicia@gmail.com",
-                "monica@gmail.com"
+                "monica@gmail.com",
+                "sophie.roudier@hotmail.fr"
             ]
         },
         {
@@ -94,7 +95,9 @@
             "city": "san-francisco",
             "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
             "image": "https://images.unsplash.com/photo-1521464302861-ce943915d1c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-            "emails_registered": []
+            "emails_registered": [
+                "sophie@test.fr"
+            ]
         },
         {
             "id": "fan-expo-san-francisco",
@@ -102,7 +105,9 @@
             "city": "san-francisco",
             "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscisfa.",
             "image": "https://images.unsplash.com/photo-1608889825103-eb5ed706fc64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-            "emails_registered": []
+            "emails_registered": [
+                "sophie@test.fr"
+            ]
         },
         {
             "id": "san-francisco-opera---san-francisco-tickets",

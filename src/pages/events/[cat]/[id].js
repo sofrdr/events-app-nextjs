@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SingleEvent from "@/components/Events/SingleEvent";
 
 export async function getStaticPaths() {
