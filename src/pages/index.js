@@ -5,9 +5,8 @@ import Home from "@/components/Home/Home";
 const inter = Inter({ subsets: ["latin"] });
 
 export async function getStaticProps() {
-  const jsonData = await import("../../data/data.json");
-
-  const data = JSON.parse(JSON.stringify(jsonData));
+  const data = await import("../../data/data.json");
+  console.log(data);
   const { events_categories } = await data;
 
   return {
